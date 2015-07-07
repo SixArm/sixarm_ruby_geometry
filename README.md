@@ -22,8 +22,8 @@ Example:
     class Airplane < Vector
       include PointAsVector3D  # Provide semantic implementation namespace.
       include Vector::XYZ      # Provide semantic accessors Vector#x, Vector#y, Vector#z.
-      include Vector::Pitch    # Provide Vector#pitch to calculate angle above the xy plane.
-      include Vector::Yaw      # Provide Vector#yaw to calculate angle within the xy plane.
+      include Vector::Pitch    # Provide Vector#pitch to calculate angle above xy plane.
+      include Vector::Yaw      # Provide Vector#yaw to calculate angle within xy plane.
     end
 
     a = Airplane[3, 4, 5]
@@ -89,10 +89,10 @@ Point modules implemented as vectors:
 
 Volume modules implemented as arrays:
 
-* `VolumeAsArray::1D`
-* `VolumeAsArray::2D`
-* `VolumeAsArray::3D`
-* `VolumeAsArray::ND`
+* `VolumeAsArray1D`
+* `VolumeAsArray2D`
+* `VolumeAsArray3D`
+* `VolumeAsArrayND`
 
 Volume modules implemented as vectors:
 
@@ -113,15 +113,15 @@ Vector modules:
 
 Accessors suitable for width, height, depth:
 
-* `Vector::W`: `Vector` `#width`.
-* `Vector::WH`: `Vector` `#width`, `#height`.
-* `Vector::WHD: `Vector` `#width`, `#height`, `#depth`.
+* `Vector::W`: `Vector` with `#width`.
+* `Vector::WH`: `Vector` with `#width`, `#height`.
+* `Vector::WHD`: `Vector` with `#width`, `#height`, `#depth`.
 
 Accessors suitable for x, y, z:
 
-* `Vector::X`: `Vector` `#x`.
-* `Vector::XY`: `Vector` `#x`, `#y`.
-* `Vector::XYZ`: `Vector` `#x`, `#y`, `#z`.
+* `Vector::X`: `Vector` with `#x`.
+* `Vector::XY`: `Vector` with `#x`, `#y`.
+* `Vector::XYZ`: `Vector` with `#x`, `#y`, `#z`.
 
 Math:
 
