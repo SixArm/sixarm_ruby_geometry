@@ -17,22 +17,25 @@ These modules are minimal building blocks for larger apps; these modules are int
 
 Example:
 
-    require "sixarm_ruby_geometry"
-
-    class Airplane < Vector
-      include PointAsVector3D  # Provide semantic implementation namespace.
-      include Vector::XYZ      # Provide semantic accessors Vector#x, Vector#y, Vector#z.
-      include Vector::Pitch    # Provide Vector#pitch to calculate angle above xy plane.
-      include Vector::Yaw      # Provide Vector#yaw to calculate angle within xy plane.
+    class MyBox < Vector
+      include Vector::XY
     end
 
-    a = Airplane[3, 4, 5]
-    a.kind_of?(PointAsVector3D) #=> true
-    a.x #=> 3
-    a.y #=> 4
-    a.z #=> 5
-    a.pitch #=> 0.7853981633974483
-    a.yaw #=> -0.9272952180016122
+    box = MyBox[1, 2, 3]
+    box.x #=> 1
+    box.y #=> 2
+
+
+Example:
+
+    class MyAirplane < Vector
+      include Vector::Pitch
+      include Vector::Yaw
+    end
+
+    airplane = MyAirplane[3, 4, 5]
+    airplane.pitch #=> 0.7853981633974483
+    airplane.yaw #=> -0.9272952180016122
 
 For docs go to <http://sixarm.com/sixarm_ruby_geometry/doc>
 
