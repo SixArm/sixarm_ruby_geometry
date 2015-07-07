@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-require 'rake'
-require 'rake/testtask'
+require "rake"
+require "rake/testtask"
 
 task :default => :test
 
