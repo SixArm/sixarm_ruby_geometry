@@ -20,10 +20,10 @@ Example:
     require "sixarm_ruby_geometry"
 
     class Airplane < Vector
-      include PointAsVector3D  # This class is a point, implemented as a vector, and 3-dimensional.
+      include PointAsVector3D  # Provide semantic implementation namespace.
       include Vector::XYZ      # Provide semantic accessors Vector#x, Vector#y, Vector#z.
-      include Vector::Pitch    # Provide Vector#pitch to calculate radian angle above the xy plane.
-      include Vector::Yaw      # Provide Vector#yaw to calculate radian angle within the xy plane.
+      include Vector::Pitch    # Provide Vector#pitch to calculate angle above the xy plane.
+      include Vector::Yaw      # Provide Vector#yaw to calculate angle within the xy plane.
     end
 
     a = Airplane[3, 4, 5]
