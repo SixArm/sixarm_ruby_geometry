@@ -3,13 +3,13 @@
 You may choose any of these open source licenses:
 
   * Apache License
-  * BSD License
+  * BSD License (BSD)
   * CreativeCommons License, Non-commercial Share Alike
   * GNU Affero General Public License (AGPL)
   * GNU General Public License Version (GPL)
   * GNU Lesser General Public License (LGPL)
-  * MIT License
-  * Perl Artistic License
+  * MIT License (MIT)
+  * Perl Artistic License (PAL)
   * Ruby License
 
 The software is provided "as is", without warranty of any kind,
