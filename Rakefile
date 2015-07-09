@@ -14,3 +14,4 @@ task :test do
   $:<<'test'
   Dir.glob('./test/**/*.rb').each{|file| require file }
 end
+task :default => [:test]

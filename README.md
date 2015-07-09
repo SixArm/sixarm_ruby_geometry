@@ -6,7 +6,7 @@
 * Doc: <http://sixarm.com/sixarm_ruby_geometry/doc>
 * Gem: <http://rubygems.org/gems/sixarm_ruby_geometry>
 * Repo: <http://github.com/sixarm/sixarm_ruby_geometry>
-* Email: Joel Parker Henderson <joel@sixarm.com>
+* Email: Joel Parker Henderson, <joel@sixarm.com>
 
 
 ## Introduction
@@ -50,7 +50,7 @@ Install:
 
 Bundler:
 
-    gem "sixarm_ruby_geometry", ">=1.0.0", "<2"
+    gem "sixarm_ruby_geometry", ">=1.0.1", "<2"
 
 Require:
 
