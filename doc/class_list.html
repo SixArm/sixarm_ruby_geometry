@@ -8,18 +8,23 @@
     
       <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
     
-    
+
     
       <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
     
       <script type="text/javascript" charset="utf-8" src="js/full_list.js"></script>
     
-    
+
+    <title>Class List</title>
     <base id="base_target" target="_parent" />
   </head>
   <body>
     <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) {
+      var hasFrames = false;
+      try {
+        hasFrames = window.top.frames.main ? true : false;
+      } catch (e) { }
+      if (hasFrames) {
         document.getElementById('base_target').target = 'main';
         document.body.className = 'frames';
       }
@@ -28,18 +33,24 @@
       <h1 id="full_list_header">Class List</h1>
       <div id="nav">
         
-          <a target="_self" href="class_list.html">Classes</a>
+          <span><a target="_self" href="class_list.html">
+            Classes
+          </a></span>
         
-          <a target="_self" href="method_list.html">Methods</a>
+          <span><a target="_self" href="method_list.html">
+            Methods
+          </a></span>
         
-          <a target="_self" href="file_list.html">Files</a>
+          <span><a target="_self" href="file_list.html">
+            Files
+          </a></span>
         
       </div>
       <div id="search">Search: <input type="text" /></div>
 
       <ul id="full_list" class="class">
-        <li><span class='object_link'><a href="top-level-namespace.html" title=" (root)">Top Level Namespace</a></span></li>
-<li><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="CSV.html" title="CSV (class)">CSV</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Class.html" title="Class (class)">Class</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Date.html" title="Date (class)">Date</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Enumerable.html" title="Enumerable (module)">Enumerable</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="File.html" title="File (class)">File</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Fixnum.html" title="Fixnum (class)">Fixnum</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="IO.html" title="IO (class)">IO</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Kernel.html" title="Kernel (module)">Kernel</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Math.html" title="Math (module)">Math</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="NilClass.html" title="NilClass (class)">NilClass</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span> &lt; BasicObject<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Process.html" title="Process (module)">Process</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="REXML/Attributes.html" title="REXML::Attributes (class)">REXML::Attributes</a></span> &lt; Object<small class='search_info'>REXML</small></li><li><span class='object_link'><a href="REXML/Document.html" title="REXML::Document (class)">REXML::Document</a></span> &lt; Object<small class='search_info'>REXML</small></li><li><span class='object_link'><a href="REXML/Element.html" title="REXML::Element (class)">REXML::Element</a></span> &lt; Object<small class='search_info'>REXML</small></li><li><span class='object_link'><a href="String.html" title="String (class)">String</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Symbol.html" title="Symbol (class)">Symbol</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Time.html" title="Time (class)">Time</a></span> &lt; Object<small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="XML.html" title="XML (module)">XML</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="YAML.html" title="YAML (module)">YAML</a></span><small class='search_info'>Top Level Namespace</small></li>
+        <li><span class='object_link'><a href="top-level-namespace.html" title="Top Level Namespace (root)">Top Level Namespace</a></span></li>
+<li><span class='object_link'><a href="PointAsArray1D.html" title="PointAsArray1D (module)">PointAsArray1D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="PointAsArray2D.html" title="PointAsArray2D (module)">PointAsArray2D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="PointAsArray3D.html" title="PointAsArray3D (module)">PointAsArray3D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="PointAsArrayND.html" title="PointAsArrayND (module)">PointAsArrayND</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="PointAsVector1D.html" title="PointAsVector1D (module)">PointAsVector1D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="PointAsVector2D.html" title="PointAsVector2D (module)">PointAsVector2D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="PointAsVector3D.html" title="PointAsVector3D (module)">PointAsVector3D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="PointAsVectorND.html" title="PointAsVectorND (module)">PointAsVectorND</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Vector1D.html" title="Vector1D (module)">Vector1D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Vector2D.html" title="Vector2D (module)">Vector2D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Vector3D.html" title="Vector3D (module)">Vector3D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="Vector/Pitch.html" title="Vector::Pitch (module)">Vector::Pitch</a></span><small class='search_info'>Vector</small></li><li><span class='object_link'><a href="Vector/Rad.html" title="Vector::Rad (module)">Vector::Rad</a></span><small class='search_info'>Vector</small></li><li><span class='object_link'><a href="Vector/WH.html" title="Vector::WH (module)">Vector::WH</a></span><small class='search_info'>Vector</small></li><li><span class='object_link'><a href="Vector/WHD.html" title="Vector::WHD (module)">Vector::WHD</a></span><small class='search_info'>Vector</small></li><li><span class='object_link'><a href="Vector/XY.html" title="Vector::XY (module)">Vector::XY</a></span><small class='search_info'>Vector</small></li><li><span class='object_link'><a href="Vector/XYZ.html" title="Vector::XYZ (module)">Vector::XYZ</a></span><small class='search_info'>Vector</small></li><li><span class='object_link'><a href="Vector/Yaw.html" title="Vector::Yaw (module)">Vector::Yaw</a></span><small class='search_info'>Vector</small></li><li><span class='object_link'><a href="VectorND.html" title="VectorND (module)">VectorND</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="VolumeAsArray1D.html" title="VolumeAsArray1D (module)">VolumeAsArray1D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="VolumeAsArray2D.html" title="VolumeAsArray2D (module)">VolumeAsArray2D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="VolumeAsArray3D.html" title="VolumeAsArray3D (module)">VolumeAsArray3D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="VolumeAsArrayND.html" title="VolumeAsArrayND (module)">VolumeAsArrayND</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="VolumeAsVector1D.html" title="VolumeAsVector1D (module)">VolumeAsVector1D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="VolumeAsVector2D.html" title="VolumeAsVector2D (module)">VolumeAsVector2D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="VolumeAsVector3D.html" title="VolumeAsVector3D (module)">VolumeAsVector3D</a></span><small class='search_info'>Top Level Namespace</small></li><li><span class='object_link'><a href="VolumeAsVectorND.html" title="VolumeAsVectorND (module)">VolumeAsVectorND</a></span><small class='search_info'>Top Level Namespace</small></li>
 
       </ul>
     </div>
