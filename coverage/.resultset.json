@@ -1,7 +1,7 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/Users/joel/git/sixarm/sixarm_ruby_geometry/lib/sixarm_ruby_geometry/point/point_as_vector_1d.rb": [
+      "/Users/joel/git/sixarm/sixarm_ruby_geometry/lib/sixarm_ruby_geometry/point/point_as_array_1d.rb": [
         null,
         null,
         null,
@@ -12,9 +12,22 @@
         null,
         1,
         null
+      ],
+      "/Users/joel/git/sixarm/sixarm_ruby_geometry/test/sixarm_ruby_geometry_test/fake.rb": [
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null
       ]
     },
-    "timestamp": 1436247807
+    "timestamp": 1436417543
   },
   "Unknown Test Framework": {
     "coverage": {
@@ -144,6 +157,18 @@
         null
       ],
       "/Users/joel/git/sixarm/sixarm_ruby_geometry/lib/sixarm_ruby_geometry/vector/vector_3d.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/joel/git/sixarm/sixarm_ruby_geometry/lib/sixarm_ruby_geometry/vector/vector_nd.rb": [
         null,
         null,
         null,
@@ -433,6 +458,6 @@
         null
       ]
     },
-    "timestamp": 1436251525
+    "timestamp": 1436417578
   }
 }
