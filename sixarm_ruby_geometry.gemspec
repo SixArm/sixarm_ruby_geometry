@@ -20,13 +20,7 @@ Gem::Specification.new do |s|
   s.has_rdoc       = true
 
   s.files = [
-    ".gemtest",
-    "CHANGES.md",
-    "CONTRIBUTING.md",
     "Rakefile",
-    "LICENSE.md",
-    "README.md",
-    "VERSION",
     "lib/sixarm_ruby_geometry/point/point_as_array_1d.rb",
     "lib/sixarm_ruby_geometry/point/point_as_array_2d.rb",
     "lib/sixarm_ruby_geometry/point/point_as_array_3d.rb",
