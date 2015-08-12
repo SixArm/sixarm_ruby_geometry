@@ -19,66 +19,9 @@ Gem::Specification.new do |s|
   s.require_path   = "lib"
   s.has_rdoc       = true
 
-  s.files = [
-    "Rakefile",
-    "lib/sixarm_ruby_geometry/point/point_as_array_1d.rb",
-    "lib/sixarm_ruby_geometry/point/point_as_array_2d.rb",
-    "lib/sixarm_ruby_geometry/point/point_as_array_3d.rb",
-    "lib/sixarm_ruby_geometry/point/point_as_array_nd.rb",
-    "lib/sixarm_ruby_geometry/point/point_as_vector_1d.rb",
-    "lib/sixarm_ruby_geometry/point/point_as_vector_2d.rb",
-    "lib/sixarm_ruby_geometry/point/point_as_vector_3d.rb",
-    "lib/sixarm_ruby_geometry/point/point_as_vector_nd.rb",
-    "lib/sixarm_ruby_geometry/vector/vector_1d.rb",
-    "lib/sixarm_ruby_geometry/vector/vector_2d.rb",
-    "lib/sixarm_ruby_geometry/vector/vector_3d.rb",
-    "lib/sixarm_ruby_geometry/vector/vector_nd.rb",
-    "lib/sixarm_ruby_geometry/vector/vector_pitch.rb",
-    "lib/sixarm_ruby_geometry/vector/vector_rad.rb",
-    "lib/sixarm_ruby_geometry/vector/vector_wh.rb",
-    "lib/sixarm_ruby_geometry/vector/vector_whd.rb",
-    "lib/sixarm_ruby_geometry/vector/vector_xy.rb",
-    "lib/sixarm_ruby_geometry/vector/vector_xyz.rb",
-    "lib/sixarm_ruby_geometry/vector/vector_yaw.rb",
-    "lib/sixarm_ruby_geometry/volume/volume_as_array_1d.rb",
-    "lib/sixarm_ruby_geometry/volume/volume_as_array_2d.rb",
-    "lib/sixarm_ruby_geometry/volume/volume_as_array_3d.rb",
-    "lib/sixarm_ruby_geometry/volume/volume_as_array_nd.rb",
-    "lib/sixarm_ruby_geometry/volume/volume_as_vector_1d.rb",
-    "lib/sixarm_ruby_geometry/volume/volume_as_vector_2d.rb",
-    "lib/sixarm_ruby_geometry/volume/volume_as_vector_3d.rb",
-    "lib/sixarm_ruby_geometry/volume/volume_as_vector_nd.rb",
-  ]
+  s.files = Dir["Rakefile", "lib/**/*.rb"]
 
-  s.test_files = [
-    "test/sixarm_ruby_geometry_test/point/point_as_array_1d_test.rb",
-    "test/sixarm_ruby_geometry_test/point/point_as_array_2d_test.rb",
-    "test/sixarm_ruby_geometry_test/point/point_as_array_3d_test.rb",
-    "test/sixarm_ruby_geometry_test/point/point_as_array_nd_test.rb",
-    "test/sixarm_ruby_geometry_test/point/point_as_vector_1d_test.rb",
-    "test/sixarm_ruby_geometry_test/point/point_as_vector_2d_test.rb",
-    "test/sixarm_ruby_geometry_test/point/point_as_vector_3d_test.rb",
-    "test/sixarm_ruby_geometry_test/point/point_as_vector_nd_test.rb",
-    "test/sixarm_ruby_geometry_test/vector/vector_1d_test.rb",
-    "test/sixarm_ruby_geometry_test/vector/vector_2d_test.rb",
-    "test/sixarm_ruby_geometry_test/vector/vector_3d_test.rb",
-    "test/sixarm_ruby_geometry_test/vector/vector_nd_test.rb",
-    "test/sixarm_ruby_geometry_test/vector/vector_pitch_test.rb",
-    "test/sixarm_ruby_geometry_test/vector/vector_rad_test.rb",
-    "test/sixarm_ruby_geometry_test/vector/vector_wh_test.rb",
-    "test/sixarm_ruby_geometry_test/vector/vector_whd_test.rb",
-    "test/sixarm_ruby_geometry_test/vector/vector_xy_test.rb",
-    "test/sixarm_ruby_geometry_test/vector/vector_xyz_test.rb",
-    "test/sixarm_ruby_geometry_test/vector/vector_yaw_test.rb",
-    "test/sixarm_ruby_geometry_test/volume/volume_as_array_1d_test.rb",
-    "test/sixarm_ruby_geometry_test/volume/volume_as_array_2d_test.rb",
-    "test/sixarm_ruby_geometry_test/volume/volume_as_array_3d_test.rb",
-    "test/sixarm_ruby_geometry_test/volume/volume_as_array_nd_test.rb",
-    "test/sixarm_ruby_geometry_test/volume/volume_as_vector_1d_test.rb",
-    "test/sixarm_ruby_geometry_test/volume/volume_as_vector_2d_test.rb",
-    "test/sixarm_ruby_geometry_test/volume/volume_as_vector_3d_test.rb",
-    "test/sixarm_ruby_geometry_test/volume/volume_as_vector_nd_test.rb",
-  ]
+  s.test_files = Dir["test/**/*.rb"]
 
   s.add_development_dependency('minitest', '>= 5.7.0', '< 6')
   s.add_development_dependency('rake', '> 10.4.2', '< 11')
