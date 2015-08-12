@@ -20,9 +20,9 @@
 
 Geometry modules for points, vectors, volumes, etc.
 
-These modules are minimal building blocks for larger apps; these modules are intended to provide namespaces, plus some generally useful implemenation methods.
+These modules are minimal building blocks for larger apps, providing namespaces and broadly useful implemenation methods.
 
-Example:
+Example - Grid X/Y:
 
     class MyGrid < Vector  # Typical Ruby vector
       include Vector::XY   # Mix in methods #x, #x=, #y, #y=
@@ -32,7 +32,7 @@ Example:
     grid.x #=> 10
     grid.y #=> 20
 
-Example:
+Example - Pitch and Yaw:
 
     class MyAirplane < Vector  # Typical Ruby vector
       include Vector::Pitch    # Mix in method #pitch
@@ -43,37 +43,40 @@ Example:
     airplane.pitch #=> 0.7853981633974483
     airplane.yaw #=> -0.9272952180016122
 
-For docs go to <http://sixarm.com/sixarm_ruby_geometry/doc>
+The complete docs are at <http://sixarm.com/sixarm_ruby_geometry/doc>
 
 Want to help? We're happy to get pull requests.
 
 
 <!--INSTALL-OPEN-->
 
-## Install
+## Installation
 
-To install using a Gemfile, add this:
+### Gemfile
+Add to your Gemfile:
 
     gem "sixarm_ruby_geometry", ">= 1.0.1", "< 2"
 
-To install using the command line, run this:
+### Command Line
+* Basic: Run the following line in a terminal:
 
     gem install sixarm_ruby_geometry -v ">= 1.0.1, < 2"
 
-To install using the command line with high security, run this:
+* **More secure:** Run these three commands in a terminal:
 
     wget http://sixarm.com/sixarm.pem
     gem cert --add sixarm.pem && gem sources --add http://sixarm.com
     gem install sixarm_ruby_geometry -v ">= 1.0.1, < 2" --trust-policy HighSecurity
 
+### Requiring the Gem
 To require the gem in your code:
 
     require "sixarm_ruby_geometry"
 
 <!--INSTALL-SHUT-->
 
-
-## Point
+## Usage
+### Point
 
 A point can be:
 
@@ -101,7 +104,7 @@ Point modules that are implemented as vectors:
 * `PointAsVectorND`
 
 
-## Volume
+### Volume
 
 A volume can be:
 
@@ -128,8 +131,7 @@ Volume modules that are implemented as vectors:
 * `VolumeAsVector3D`
 * `VolumeAsVectorND`
 
-
-## Vector
+### Vector
 
 Vector modules:
 
