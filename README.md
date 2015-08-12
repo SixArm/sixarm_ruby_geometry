@@ -24,20 +24,19 @@ These modules are minimal building blocks for larger apps; these modules are int
 
 Example:
 
-    class MyBox < Vector
-      include Vector::XY
+    class MyGrid < Vector  # Typical Ruby vector
+      include Vector::XY   # Mix in methods #x, #x=, #y, #y=
     end
 
-    box = MyBox[1, 2, 3]
-    box.x #=> 1
-    box.y #=> 2
-
+    grid = MyGrid[10, 20]
+    grid.x #=> 10
+    grid.y #=> 20
 
 Example:
 
-    class MyAirplane < Vector
-      include Vector::Pitch
-      include Vector::Yaw
+    class MyAirplane < Vector  # Typical Ruby vector
+      include Vector::Pitch    # Mix in method #pitch
+      include Vector::Yaw      # Mix in method #yaw
     end
 
     airplane = MyAirplane[3, 4, 5]
@@ -87,14 +86,14 @@ Ruby has two typical ways to implement a point: as an `Array` class, or a `Vecto
 
 We provide both kinds of implementations; you will likely want to pick the implementation that works best with your other code, such as any math libraries that you may be using.
 
-Point classes implemented as arrays:
+Point modules that are implemented as arrays:
 
 * `PointAsArray1D`
 * `PointAsArray2D`
 * `PointAsArray3D`
 * `PointAsArrayND`
 
-Point classes implemented as vectors:
+Point modules that are implemented as vectors:
 
 * `PointAsVector1D`
 * `PointAsVector2D`
@@ -115,14 +114,14 @@ Ruby has two typical ways to implement a volume: as an `Array` class, or a `Vect
 
 We provide both kinds of implementations; you will likely want to pick the implementation that works best with your other code, such as any math libraries that you may be using.
 
-Volume modules implemented as arrays:
+Volume modules that are implemented as arrays:
 
 * `VolumeAsArray1D`
 * `VolumeAsArray2D`
 * `VolumeAsArray3D`
 * `VolumeAsArrayND`
 
-Volume modules implemented as vectors:
+Volume modules that are implemented as vectors:
 
 * `VolumeAsVector1D`
 * `VolumeAsVector2D`
