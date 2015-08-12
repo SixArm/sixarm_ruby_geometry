@@ -2,7 +2,7 @@
 
 <!--HEADER-OPEN-->
 
-[![Code Climate](https://codeclimate.com/github/SixArm/sixarm_ruby_geometry.git.png)](https://codeclimate.com/github/SixArm/sixarm_ruby_geometry.git)
+[![Code Climate](https://codeclimate.com/github/SixArm/sixarm_ruby_geometry/badges/gpa.svg)](https://codeclimate.com/github/SixArm/sixarm_ruby_geometry)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_geometry.git.png)](https://travis-ci.org/SixArm/sixarm_ruby_geometry.git)
 
 * Git: <https://github.com/sixarm/sixarm_ruby_geometry.git>
