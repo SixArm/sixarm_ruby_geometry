@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for contributing!
+**Thank you for contributing!**
 
 If you would like to contribute a donation, an easy way is to use PayPal to sixarm@sixarm.com.
 
@@ -19,7 +19,7 @@ There are three easy steps:
 
 2. Work as you like. 
 
-   * Please create tests. This helps us know that all your code runs cleanly.
+   * Please create tests; you can use the existing tests as models. This helps us know that all your code runs cleanly.
 
 3. Push to your fork and submit a pull request.
 
