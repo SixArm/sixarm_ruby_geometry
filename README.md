@@ -154,5 +154,5 @@ Accessors suitable for x, y, z:
 Math:
 
 * `Vector::Rad`: `Vector` `#rad` to calculate a 2-dimensional angle in radians.
-* `Vector::Pitch`: `Vector` `#pitch` to calculate a 3-dimensional pitch, i.e. angle from the xy plane to z.
-* `Vector::Yaw`: `Vector` `#yaw` to calculate a 3-dimensional yaw, i.e. angle within the xy plane.
+* `Vector::Pitch`: `Vector` `#pitch` to calculate a 3-dimensional pitch, i.e. angle from xy plane to z.
+* `Vector::Yaw`: `Vector` `#yaw` to calculate a 3-dimensional yaw, i.e. angle within xy plane.
