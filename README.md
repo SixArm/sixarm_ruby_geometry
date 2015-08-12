@@ -76,15 +76,25 @@ To require the gem in your code:
 
 ## Point
 
-Point modules implemented as arrays:
+A point can be:
 
-* `PointArray1D`
-* `PointArray2D`
-* `PointArray3D`
-* `PointArrayND`
+* 1D: One dimensional, such as a point on a line.
+* 2D: Two dimensional, such as a point in an (x, y) plane.
+* 3D: Three dimensional, such as a point in an (x, y, z) space.
+* ND: N dimensional, such as higher dimensions.
 
+Ruby has two typical ways to implement a point: as an `Array` class, or a `Vector` class.
 
-Point modules implemented as vectors:
+We provide both kinds of implementations; you will likely want to pick the implementation that works best with your other code, such as any math libraries that you may be using.
+
+Point classes implemented as arrays:
+
+* `PointAsArray1D`
+* `PointAsArray2D`
+* `PointAsArray3D`
+* `PointAsArrayND`
+
+Point classes implemented as vectors:
 
 * `PointAsVector1D`
 * `PointAsVector2D`
@@ -93,6 +103,17 @@ Point modules implemented as vectors:
 
 
 ## Volume
+
+A volume can be:
+
+* 1D: One dimensional, such as a line.
+* 2D: Two dimensional, such as a circle.
+* 3D: Three dimensional, such as a sphere.
+* ND: N dimensional, such as higher dimensionals.
+
+Ruby has two typical ways to implement a volume: as an `Array` class, or a `Vector` class.
+
+We provide both kinds of implementations; you will likely want to pick the implementation that works best with your other code, such as any math libraries that you may be using.
 
 Volume modules implemented as arrays:
 
@@ -115,8 +136,8 @@ Vector modules:
 
 * `Vector1D`: `Vector` intended to use 1 dimension.
 * `Vector2D`: `Vector` intended to use 2 dimensions.
-* `Vector3D`; `Vector` intended to use 3 dimensions.
-* `VectorND`; `Vector` intended to use N dimensions.
+* `Vector3D`: `Vector` intended to use 3 dimensions.
+* `VectorND`: `Vector` intended to use N dimensions.
 
 Accessors suitable for width, height, depth:
 
