@@ -9,16 +9,16 @@
 * Doc: <http://sixarm.com/sixarm_ruby_geometry/doc>
 * Gem: <https://rubygems.org/gems/sixarm_ruby_geometry>
 * Contact: Joel Parker Henderson, <joel@sixarm.com>
-* Changes: See CHANGES.md file.
-* License: See LICENSE.md file.
-* Helping: See CONTRIBUTING.md file.
+* Changes: See [CHANGES.md](CHANGES.md).
+* License: See [LICENSE.md](LICENSE.md).
+* Helping: See [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 <!--HEADER-SHUT-->
 
 
 ## Introduction
 
-Geometry modules for points, vectors, volumes, etc.
+Geometry modules for points, vectors, and volumes.
 
 These modules are minimal building blocks for larger apps, providing namespaces and broadly useful implemenation methods.
 
