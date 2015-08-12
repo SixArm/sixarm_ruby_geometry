@@ -59,15 +59,15 @@ Add to your Gemfile:
 
 ### Command Line
 * Basic: Run the following line in a terminal:
-
+```
     gem install sixarm_ruby_geometry -v ">= 1.0.1, < 2"
-
+```
 * **More secure:** Run these three commands in a terminal:
-
+```
     wget http://sixarm.com/sixarm.pem
     gem cert --add sixarm.pem && gem sources --add http://sixarm.com
     gem install sixarm_ruby_geometry -v ">= 1.0.1, < 2" --trust-policy HighSecurity
-
+```
 ### Requiring the Gem
 To require the gem in your code:
 
