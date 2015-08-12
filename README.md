@@ -76,27 +76,27 @@ To require the gem in your code:
 <!--INSTALL-SHUT-->
 
 ## Usage
-### Point
+### Points
 
 A point can be:
 
-* 1D: One dimensional, such as a point on a line.
-* 2D: Two dimensional, such as a point in an (x, y) plane.
-* 3D: Three dimensional, such as a point in an (x, y, z) space.
-* ND: N dimensional, such as higher dimensions.
+* `1D`: One dimensional, a point on a line.
+* `2D`: Two dimensional, a point in an (x, y) plane.
+* `3D`: Three dimensional, a point in an (x, y, z) space.
+* `ND`: N dimensional, a point (coordinate) in a higher dimensional space.
 
-Ruby has two typical ways to implement a point: as an `Array` class, or a `Vector` class.
+A point can be implemented in two ways in Ruby: as an `Array` class, or a `Vector` class.
 
-We provide both kinds of implementations; you will likely want to pick the implementation that works best with your other code, such as any math libraries that you may be using.
+Both implementations are provided in this gem; you should choose the implementation that works best with your other code and math libraries.
 
-Point modules that are implemented as arrays:
+Point modules implemented as arrays:
 
 * `PointAsArray1D`
 * `PointAsArray2D`
 * `PointAsArray3D`
 * `PointAsArrayND`
 
-Point modules that are implemented as vectors:
+Point modules implemented as vectors:
 
 * `PointAsVector1D`
 * `PointAsVector2D`
@@ -104,41 +104,37 @@ Point modules that are implemented as vectors:
 * `PointAsVectorND`
 
 
-### Volume
+### Volumes
 
 A volume can be:
 
-* 1D: One dimensional, such as a line.
-* 2D: Two dimensional, such as a circle.
-* 3D: Three dimensional, such as a sphere.
-* ND: N dimensional, such as higher dimensionals.
+* `1D`: One dimensional, such as a line.
+* `2D`: Two dimensional, such as a circle.
+* `3D`: Three dimensional, such as a sphere.
+* `ND`: N dimensional, such as higher dimensionals.
 
-Ruby has two typical ways to implement a volume: as an `Array` class, or a `Vector` class.
+A volume can be implemented in two ways in Ruby: as an `Array` or `Vector`; again, both implementations are provided.
 
-We provide both kinds of implementations; you will likely want to pick the implementation that works best with your other code, such as any math libraries that you may be using.
-
-Volume modules that are implemented as arrays:
+Volume modules implemented as arrays:
 
 * `VolumeAsArray1D`
 * `VolumeAsArray2D`
 * `VolumeAsArray3D`
 * `VolumeAsArrayND`
 
-Volume modules that are implemented as vectors:
+Volume modules implemented as vectors:
 
 * `VolumeAsVector1D`
 * `VolumeAsVector2D`
 * `VolumeAsVector3D`
 * `VolumeAsVectorND`
 
-### Vector
+### Vector modules:
 
-Vector modules:
-
-* `Vector1D`: `Vector` intended to use 1 dimension.
-* `Vector2D`: `Vector` intended to use 2 dimensions.
-* `Vector3D`: `Vector` intended to use 3 dimensions.
-* `VectorND`: `Vector` intended to use N dimensions.
+* `Vector1D`: 1 dimension.
+* `Vector2D`: 2 dimensions.
+* `Vector3D`: 3 dimensions.
+* `VectorND`: N dimensions.
 
 Accessors suitable for width, height, depth:
 
@@ -148,12 +144,12 @@ Accessors suitable for width, height, depth:
 
 Accessors suitable for x, y, z:
 
-* `Vector::X`: `Vector` with `#x`.
-* `Vector::XY`: `Vector` with `#x`, `#y`.
-* `Vector::XYZ`: `Vector` with `#x`, `#y`, `#z`.
+* `Vector::X`: `Vector` with `#x` coordinate.
+* `Vector::XY`: `Vector` with `#x`, `#y`  coordinates.
+* `Vector::XYZ`: `Vector` with `#x`, `#y`, `#z`  coordinates.
 
 Math:
 
-* `Vector::Rad`: `Vector` `#rad` to calculate a 2-dimensional angle in radians.
-* `Vector::Pitch`: `Vector` `#pitch` to calculate a 3-dimensional pitch, i.e. angle from xy plane to z.
-* `Vector::Yaw`: `Vector` `#yaw` to calculate a 3-dimensional yaw, i.e. angle within xy plane.
+* `Vector::Rad`: calculate a 2-dimensional angle in radians.
+* `Vector::Pitch`: calculate a 3-dimensional pitch, i.e. angle from xy plane to z.
+* `Vector::Yaw`: calculate a 3-dimensional yaw, i.e. angle within xy plane.
