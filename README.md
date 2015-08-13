@@ -2,44 +2,63 @@
 
 <!--HEADER-OPEN-->
 
-[![Code Climate](https://codeclimate.com/github/SixArm/sixarm_ruby_geometry/badges/gpa.svg)](https://codeclimate.com/github/SixArm/sixarm_ruby_geometry)
-[![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_geometry.svg?branch=master)](https://travis-ci.org/SixArm/sixarm_ruby_geometry)
+[![Gem Version](https://badge.fury.io/rb/sixarm_ruby_geometry.svg)](http://badge.fury.io/rb/sixarm_ruby_geometry)
+[![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_geometry.png)](https://travis-ci.org/SixArm/sixarm_ruby_geometry)
+[![Code Climate](https://codeclimate.com/github/SixArm/sixarm_ruby_geometry.png)](https://codeclimate.com/github/SixArm/sixarm_ruby_geometry)
+[![Coverage Status](https://coveralls.io/repos/SixArm/sixarm_ruby_geometry/badge.svg?branch=master&service=github)](https://coveralls.io/github/SixArm/sixarm_ruby_geometry?branch=master)
 
-* Git: <https://github.com/sixarm/sixarm_ruby_geometry.git>
+* Git: <https://github.com/sixarm/sixarm_ruby_geometry>
 * Doc: <http://sixarm.com/sixarm_ruby_geometry/doc>
 * Gem: <https://rubygems.org/gems/sixarm_ruby_geometry>
 * Contact: Joel Parker Henderson, <joel@sixarm.com>
-* Changes: See [CHANGES.md](CHANGES.md).
-* License: See [LICENSE.md](LICENSE.md).
-* Helping: See [CONTRIBUTING.md](./CONTRIBUTING.md).
+* Changes: See CHANGES.md file.
+* License: See LICENSE.md file.
+* Helping: See CONTRIBUTING.md file.
 
 <!--HEADER-SHUT-->
 
 
 ## Introduction
 
-Geometry modules for points, vectors, and volumes.
+Geometry modules for points, spaces, arrays, vectors, math, etc.
 
 These modules are minimal building blocks for larger apps, providing namespaces and broadly useful implemenation methods.
 
-Example - Grid X/Y:
+Example of a point:
 
-    class MyGrid < Vector  # Typical Ruby vector
-      include Vector::XY   # Mix in methods #x, #x=, #y, #y=
+    class Point < Array
+      # Mix in methods #x, #x=, #y, #y=, #z, #z=
+      include Indexable::XYZ
     end
 
-    grid = MyGrid[10, 20]
-    grid.x #=> 10
-    grid.y #=> 20
+    point = Point[10, 20, 30]
+    point.x #=> 10
+    point.y #=> 20
+    point.z #=> 30
 
-Example - Pitch and Yaw:
 
-    class MyAirplane < Vector  # Typical Ruby vector
-      include Vector::Pitch    # Mix in method #pitch
-      include Vector::Yaw      # Mix in method #yaw
+Example of a space:
+
+    class Space < Array
+      # Mix in methods #width, #width=, #height, #height=, #depth, #depth=
+      include Indexable::WidthHeightDepth
     end
 
-    airplane = MyAirplane[3, 4, 5]
+    space = Space[10, 20, 30]
+    space.width  #=> 10
+    space.height #=> 20
+    space.depth  #=> 30
+
+
+Example of math:
+
+    class Airplane < Array
+      # Mix in methods #pitch, #yaw
+      include Indexable::Pitch
+      include Indexable::Yaw
+    end
+
+    airplane = Airplane[3, 4, 5]
     airplane.pitch #=> 0.7853981633974483
     airplane.yaw #=> -0.9272952180016122
 
@@ -50,40 +69,38 @@ Want to help? We're happy to get pull requests.
 
 <!--INSTALL-OPEN-->
 
-## Installation
+## Install
 
-### Gemfile
-Add to your Gemfile:
+### Gem
 
-    gem "sixarm_ruby_geometry", ">= 1.0.1", "< 2"
+Run this command in your shell or terminal:
 
-### Command Line
-* Basic: Run the following line in a terminal:
-```
-    gem install sixarm_ruby_geometry -v ">= 1.0.1, < 2"
-```
-* **More secure:** Run these three commands in a terminal:
-```
-    wget http://sixarm.com/sixarm.pem
-    gem cert --add sixarm.pem && gem sources --add http://sixarm.com
-    gem install sixarm_ruby_geometry -v ">= 1.0.1, < 2" --trust-policy HighSecurity
-```
-### Requiring the Gem
+    gem install sixarm_ruby_geometry
+
+Or add this to your Gemfile:
+
+    gem 'sixarm_ruby_geometry'
+
+### Require
+
 To require the gem in your code:
 
-    require "sixarm_ruby_geometry"
+    require 'sixarm_ruby_geometry'
 
 <!--INSTALL-SHUT-->
 
+
 ## Usage
-### Points
+
+
+### Point
 
 A point can be:
 
-* `1D`: One dimensional, a point on a line.
-* `2D`: Two dimensional, a point in an (x, y) plane.
-* `3D`: Three dimensional, a point in an (x, y, z) space.
-* `ND`: N dimensional, a point (coordinate) in a higher dimensional space.
+* `1D`: One dimensional, such as a point on a line.
+* `2D`: Two dimensional, such as a point in an (x, y) plane.
+* `3D`: Three dimensional, such as a point in an (x, y, z) space.
+* `ND`: N dimensional, such as a point in a higher dimensional space.
 
 A point can be implemented in two ways in Ruby: as an `Array` class, or a `Vector` class.
 
@@ -104,52 +121,53 @@ Point modules implemented as vectors:
 * `PointAsVectorND`
 
 
-### Volumes
+### Space
 
-A volume can be:
+A space can be:
 
-* `1D`: One dimensional, such as a line.
-* `2D`: Two dimensional, such as a circle.
-* `3D`: Three dimensional, such as a sphere.
-* `ND`: N dimensional, such as higher dimensionals.
+* `1D`: 1 dimensional, such as a line.
+* `2D`: 2 dimensional, such as a square.
+* `3D`: 3 dimensional, such as a cube.
+* `ND`: N dimensional, such as a hypercube.
 
-A volume can be implemented in two ways in Ruby: as an `Array` or `Vector`; again, both implementations are provided.
+A space can be implemented in two ways in Ruby: as an `Array` or `Vector`; again, both implementations are provided.
 
-Volume modules implemented as arrays:
+Space modules implemented as arrays:
 
-* `VolumeAsArray1D`
-* `VolumeAsArray2D`
-* `VolumeAsArray3D`
-* `VolumeAsArrayND`
+* `SpaceAsArray1D`
+* `SpaceAsArray2D`
+* `SpaceAsArray3D`
+* `SpaceAsArrayND`
 
-Volume modules implemented as vectors:
+Space modules implemented as vectors:
 
-* `VolumeAsVector1D`
-* `VolumeAsVector2D`
-* `VolumeAsVector3D`
-* `VolumeAsVectorND`
+* `SpaceAsVector1D`
+* `SpaceAsVector2D`
+* `SpaceAsVector3D`
+* `SpaceAsVectorND`
 
-### Vector modules:
 
-* `Vector1D`: 1 dimension.
-* `Vector2D`: 2 dimensions.
-* `Vector3D`: 3 dimensions.
-* `VectorND`: N dimensions.
+### Indexable
 
-Accessors suitable for width, height, depth:
+* `Indexable1D`: 1 dimensional and responds to `[0]`.
+* `Indexable2D`: 2 dimensional and responds to `[0]`, `[1]`.
+* `Indexable3D`: 3 dimensional and responds to `[0]`, `[1]`, `[2]`.
+* `IndexableND`: N dimensional and responds to `[0]`...`[N]`.
 
-* `Vector::W`: `Vector` with `#width`.
-* `Vector::WH`: `Vector` with `#width`, `#height`.
-* `Vector::WHD`: `Vector` with `#width`, `#height`, `#depth`.
+Mix in methods for x, y, z:
 
-Accessors suitable for x, y, z:
+* `Indexable::X`: mix in methods `x`, `x=`, accessing `[0]`.
+* `Indexable::XY`: mix in methods `x`, `x=`, `y`, `y=`, accessing `[0]`, `[1]`.
+* `Indexable::XYZ`: mix in methods `x`, `x=`, `y`, `y=`, `z`, `z=`, accessing `[0]`, `[1]`, `[2]`.
 
-* `Vector::X`: `Vector` with `#x` coordinate.
-* `Vector::XY`: `Vector` with `#x`, `#y`  coordinates.
-* `Vector::XYZ`: `Vector` with `#x`, `#y`, `#z`  coordinates.
+Mix in methods for width, height, depth:
+
+* `Indexable::Width`: mix in methods `width`, `width=`, accessing `[0]`.
+* `Indexable::WidthHeight`: mix in methods `width`, `width=`, `height`, `height=`, accessing `[0]`, `[1]`.
+* `Indexable::WidthHeightDepth`: mix in methods `width`, `width=`, `height`, `height=`, `depth`, `depth=`, accessing `[0]`, `[1]`, `[2]`.
 
 Math:
 
-* `Vector::Rad`: calculate a 2-dimensional angle in radians.
-* `Vector::Pitch`: calculate a 3-dimensional pitch, i.e. angle from xy plane to z.
-* `Vector::Yaw`: calculate a 3-dimensional yaw, i.e. angle within xy plane.
+* `Indexable::Rad`: calculate a 2-dimensional angle in radians, accessing `[0]`, `[1]`.
+* `Indexable::Pitch`: calculate a 3-dimensional pitch, i.e. angle from xy plane to z, accessing `[0]`, `[1]`, `[2]`.
+* `Indexable::Yaw`: calculate a 3-dimensional yaw, i.e. angle within xy plane, accessing `[0]`, `[1]`, `[2]`.

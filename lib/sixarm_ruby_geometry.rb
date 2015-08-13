@@ -11,25 +11,25 @@ SOURCES = %w"
   point/point_as_vector_2d
   point/point_as_vector_3d
   point/point_as_vector_nd
-  vector/vector_1d
-  vector/vector_2d
-  vector/vector_3d
-  vector/vector_nd
-  vector/vector_pitch
-  vector/vector_rad
-  vector/vector_wh
-  vector/vector_whd
-  vector/vector_xy
-  vector/vector_xyz
-  vector/vector_yaw
-  volume/volume_as_array_1d
-  volume/volume_as_array_2d
-  volume/volume_as_array_3d
-  volume/volume_as_array_nd
-  volume/volume_as_vector_1d
-  volume/volume_as_vector_2d
-  volume/volume_as_vector_3d
-  volume/volume_as_vector_nd
+  indexable/indexable_1d
+  indexable/indexable_2d
+  indexable/indexable_3d
+  indexable/indexable_nd
+  indexable/indexable_pitch
+  indexable/indexable_rad
+  indexable/indexable_wh
+  indexable/indexable_whd
+  indexable/indexable_xy
+  indexable/indexable_xyz
+  indexable/indexable_yaw
+  space/space_as_array_1d
+  space/space_as_array_2d
+  space/space_as_array_3d
+  space/space_as_array_nd
+  space/space_as_vector_1d
+  space/space_as_vector_2d
+  space/space_as_vector_3d
+  space/space_as_vector_nd
 "
 
 SOURCES.map{|x|
