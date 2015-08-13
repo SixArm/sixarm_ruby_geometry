@@ -17,8 +17,10 @@ SOURCES = %w"
   indexable/indexable_nd
   indexable/indexable_pitch
   indexable/indexable_rad
-  indexable/indexable_wh
-  indexable/indexable_whd
+  indexable/indexable_width
+  indexable/indexable_width_height
+  indexable/indexable_width_height_depth
+  indexable/indexable_x
   indexable/indexable_xy
   indexable/indexable_xyz
   indexable/indexable_yaw
