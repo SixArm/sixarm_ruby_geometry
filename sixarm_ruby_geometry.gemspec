@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.require_path   = "lib"
   s.has_rdoc       = true
 
+  # Deliberate explicit manifest
   s.files = [
     "Rakefile",
     "lib/sixarm_ruby_geometry/point/point_as_array_1d.rb",
@@ -52,6 +53,7 @@ Gem::Specification.new do |s|
     "lib/sixarm_ruby_geometry/space/space_as_vector_nd.rb",
   ]
 
+  # Deliberate explicit manifest
   s.test_files = [
     "test/sixarm_ruby_geometry_test/point/point_as_array_1d_test.rb",
     "test/sixarm_ruby_geometry_test/point/point_as_array_2d_test.rb",
