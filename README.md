@@ -27,35 +27,30 @@ These modules are minimal building blocks for larger apps, providing namespaces 
 Example of a point:
 
     class Point < Array
-      # Mix in methods #x, #x=, #y, #y=, #z, #z=
-      include Indexable::XYZ
+      include Indexable::XY  # Accessors for x and y
     end
 
-    point = Point[10, 20, 30]
+    point = Point[10, 20]
     point.x #=> 10
     point.y #=> 20
-    point.z #=> 30
 
 
 Example of a space:
 
     class Space < Array
-      # Mix in methods #width, #width=, #height, #height=, #depth, #depth=
-      include Indexable::WidthHeightDepth
+      include Indexable::WidthHeight  # Accessors for width and height
     end
 
-    space = Space[10, 20, 30]
+    space = Space[10, 20]
     space.width  #=> 10
     space.height #=> 20
-    space.depth  #=> 30
 
 
-Example of math:
+Example of geometry math:
 
     class Airplane < Array
-      # Mix in methods #pitch, #yaw
-      include Indexable::Pitch
-      include Indexable::Yaw
+      include Indexable::Pitch  # Mix in method
+      include Indexable::Yaw    # Mix in method
     end
 
     airplane = Airplane[3, 4, 5]
@@ -91,64 +86,41 @@ To require this gem in your code:
 
 ### Point
 
-A point can be:
+A point class is easy to implement as an array or vector.
 
-* `1D`: One dimensional, such as a point on a line.
-* `2D`: Two dimensional, such as a point in an (x, y) plane.
-* `3D`: Three dimensional, such as a point in an (x, y, z) space.
-* `ND`: N dimensional, such as a point in a higher dimensional space.
+Example of a point implemented as an array:
 
-A point can be implemented in two ways in Ruby: as an `Array` class, or a `Vector` class.
+    class Point < Array
+    end
 
-Both implementations are provided in this gem; you should choose the implementation that works best with your other code and math libraries.
+Example of a point implemented as a vector:
 
-Point modules implemented as arrays:
-
-* `PointAsArray1D`
-* `PointAsArray2D`
-* `PointAsArray3D`
-* `PointAsArrayND`
-
-Point modules implemented as vectors:
-
-* `PointAsVector1D`
-* `PointAsVector2D`
-* `PointAsVector3D`
-* `PointAsVectorND`
+    class Point < Vector
+    end
 
 
 ### Space
 
-A space can be:
+A space class is easy to implement as an array or vector.
 
-* `1D`: 1 dimensional, such as a line.
-* `2D`: 2 dimensional, such as a square.
-* `3D`: 3 dimensional, such as a cube.
-* `ND`: N dimensional, such as a hypercube.
+Example of a space implemented as an array:
 
-A space can be implemented in two ways in Ruby: as an `Array` or `Vector`; again, both implementations are provided.
+    class Space < Array
+    end
 
-Space modules implemented as arrays:
+Example of a space implemented as a vector:
 
-* `SpaceAsArray1D`
-* `SpaceAsArray2D`
-* `SpaceAsArray3D`
-* `SpaceAsArrayND`
-
-Space modules implemented as vectors:
-
-* `SpaceAsVector1D`
-* `SpaceAsVector2D`
-* `SpaceAsVector3D`
-* `SpaceAsVectorND`
+    class Space < Vector
+    end
 
 
 ### Indexable
 
-* `Indexable1D`: 1 dimensional and responds to `[0]`.
-* `Indexable2D`: 2 dimensional and responds to `[0]`, `[1]`.
-* `Indexable3D`: 3 dimensional and responds to `[0]`, `[1]`, `[2]`.
-* `IndexableND`: N dimensional and responds to `[0]`...`[N]`.
+Marker modules that provide semantic information:
+
+* `Indexable::D1`: Dimension 1, responds to `[0]`.
+* `Indexable::D2`: Dimension 2, responds to `[0]`, `[1]`.
+* `Indexable::D3`: Dimension 3, responds to `[0]`, `[1]`, `[2]`.
 
 Mix in methods for x, y, z:
 
@@ -162,8 +134,63 @@ Mix in methods for width, height, depth:
 * `Indexable::WidthHeight`: mix in methods `width`, `width=`, `height`, `height=`, accessing `[0]`, `[1]`.
 * `Indexable::WidthHeightDepth`: mix in methods `width`, `width=`, `height`, `height=`, `depth`, `depth=`, accessing `[0]`, `[1]`, `[2]`.
 
-Math:
+Mix in methods for geometry math:
 
 * `Indexable::Rad`: calculate a 2-dimensional angle in radians, accessing `[0]`, `[1]`.
 * `Indexable::Pitch`: calculate a 3-dimensional pitch, i.e. angle from xy plane to z, accessing `[0]`, `[1]`, `[2]`.
 * `Indexable::Yaw`: calculate a 3-dimensional yaw, i.e. angle within xy plane, accessing `[0]`, `[1]`, `[2]`.
+
+
+### Marker Modules
+
+If you're creating a class, then you may like to emphasize the intent of the class by using marker modules.
+
+These modules are all blank by default; you may add your own code to them as you like.
+
+Point modules:
+
+* `Point`
+* `Point::Array`
+* `Point::Array::D1`
+* `Point::Array::D2`
+* `Point::Array::D3`
+* `Point::Vector`
+* `Point::Vector::D1`
+* `Point::Vector::D2`
+* `Point::Vector::D3`
+
+Space modules:
+
+* `Space`
+* `Space::Array`
+* `Space::Array::D1`
+* `Space::Array::D2`
+* `Space::Array::D3`
+* `Space::Vector`
+* `Space::Vector::D1`
+* `Space::Vector::D2`
+* `Space::Vector::D3`
+
+Examples of geometry shapes, implemented with arrays:
+
+    class Line
+      include Space::Array::D1
+    end
+
+    class Square
+      include Space::Array::D2
+    end
+
+    class Cube
+      include Space::Array::D3
+    end
+
+Examples of a chess board and chess piece, implemented with vectors:
+
+    class ChessBoard
+      include Space::Vector::2D
+    end
+
+    class ChessPiece
+      include Point::Vector::2D
+    end

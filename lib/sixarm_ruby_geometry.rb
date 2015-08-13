@@ -2,36 +2,38 @@
 
 require "matrix"
 
-SOURCES = %w"
-  point/point_as_array_1d
-  point/point_as_array_2d
-  point/point_as_array_3d
-  point/point_as_array_nd
-  point/point_as_vector_1d
-  point/point_as_vector_2d
-  point/point_as_vector_3d
-  point/point_as_vector_nd
-  indexable/indexable_1d
-  indexable/indexable_2d
-  indexable/indexable_3d
-  indexable/indexable_nd
-  indexable/indexable_pitch
-  indexable/indexable_rad
-  indexable/indexable_width
-  indexable/indexable_width_height
-  indexable/indexable_width_height_depth
-  indexable/indexable_x
-  indexable/indexable_xy
-  indexable/indexable_xyz
-  indexable/indexable_yaw
-  space/space_as_array_1d
-  space/space_as_array_2d
-  space/space_as_array_3d
-  space/space_as_array_nd
-  space/space_as_vector_1d
-  space/space_as_vector_2d
-  space/space_as_vector_3d
-  space/space_as_vector_nd
+SOURCES = %w"5
+  point
+  point/array
+  point/array/d1
+  point/array/d2
+  point/array/d3
+  point/vector
+  point/vector/d1
+  point/vector/d2
+  point/vector/d3
+  indexable
+  indexable/d1
+  indexable/d2
+  indexable/d3
+  indexable/pitch
+  indexable/rad
+  indexable/width
+  indexable/width_height
+  indexable/width_height_depth
+  indexable/x
+  indexable/xy
+  indexable/xyz
+  indexable/yaw
+  space
+  space/array
+  space/array/d1
+  space/array/d2
+  space/array/d3
+  space/vector
+  space/vector/d1
+  space/vector/d2
+  space/vector/d3
 "
 
 SOURCES.map{|x|
