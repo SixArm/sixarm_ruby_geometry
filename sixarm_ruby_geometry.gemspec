@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name           = "sixarm_ruby_geometry"
   s.summary        = "SixArm.com » Ruby » Geometry modules: point, vector, volume, etc."
   s.description    = "Geometry modules with strong types, e.g. a vector with width, height, depth."
-  s.version        = "2.0.0"
+  s.version        = "2.0.1"
 
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"
@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   # Deliberate explicit manifest
   s.files = [
     "Rakefile",
+    "lib/sixarm_ruby_geometry.rb",
     "lib/sixarm_ruby_geometry/point/point_as_array_1d.rb",
     "lib/sixarm_ruby_geometry/point/point_as_array_2d.rb",
     "lib/sixarm_ruby_geometry/point/point_as_array_3d.rb",
@@ -55,6 +56,7 @@ Gem::Specification.new do |s|
 
   # Deliberate explicit manifest
   s.test_files = [
+    "test/sixarm_ruby_geometry_test.rb",
     "test/sixarm_ruby_geometry_test/point/point_as_array_1d_test.rb",
     "test/sixarm_ruby_geometry_test/point/point_as_array_2d_test.rb",
     "test/sixarm_ruby_geometry_test/point/point_as_array_3d_test.rb",

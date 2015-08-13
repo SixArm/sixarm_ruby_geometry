@@ -71,19 +71,15 @@ Want to help? We're happy to get pull requests.
 
 ## Install
 
-### Gem
+To install using a Gemfile, add this:
 
-Run this command in your shell or terminal:
+    gem 'sixarm_ruby_geometry', '~> 2.0.1'
 
-    gem install sixarm_ruby_geometry
+To install using the command line, run this:
 
-Or add this to your Gemfile:
+    gem install sixarm_ruby_geometry -v '~> 2.0.1'
 
-    gem 'sixarm_ruby_geometry'
-
-### Require
-
-To require the gem in your code:
+To require this gem in your code:
 
     require 'sixarm_ruby_geometry'
 
