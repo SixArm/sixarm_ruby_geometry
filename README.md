@@ -68,11 +68,11 @@ Want to help? We're happy to get pull requests.
 
 To install using a Gemfile, add this:
 
-    gem 'sixarm_ruby_geometry', '~> 2.0.1'
+    gem 'sixarm_ruby_geometry', '~> 3.0.0'
 
 To install using the command line, run this:
 
-    gem install sixarm_ruby_geometry -v '~> 2.0.1'
+    gem install sixarm_ruby_geometry -v '~> 3.0.0'
 
 To require this gem in your code:
 
