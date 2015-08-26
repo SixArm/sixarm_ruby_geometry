@@ -384,6 +384,17 @@
         1,
         1,
         null,
+        1,
+        1,
+        3,
+        null,
+        null,
+        1,
+        1,
+        3,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/joel/git/sixarm/sixarm_ruby_geometry/lib/sixarm_ruby_geometry/point/vector/d1.rb": [
@@ -591,6 +602,6 @@
         null
       ]
     },
-    "timestamp": 1439509673
+    "timestamp": 1440560327
   }
 }

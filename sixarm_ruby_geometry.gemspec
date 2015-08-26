@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name           = "sixarm_ruby_geometry"
   s.summary        = "SixArm.com » Ruby » Geometry modules: point, vector, volume, etc."
   s.description    = "Geometry modules with strong types, e.g. a vector with width, height, depth."
-  s.version        = "3.0.0"
+  s.version        = "3.1.0"
 
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"

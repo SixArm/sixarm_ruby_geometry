@@ -8,5 +8,16 @@
 #
 module Point
   module Array
+
+    def +(other)
+      raise ::IndexError unless self.size == other.size
+      self.size.times.map{|i| self[i] + other[i] }
+    end
+
+    def -(other)
+      raise ::IndexError unless self.size == other.size
+      self.size.times.map{|i| self[i] - other[i] }
+    end
+
   end
 end

@@ -28,6 +28,32 @@ module Point
         assert_equal(e0, c[0])
       end
 
+      def test_plus
+        a0 = fake_n
+        a1 = fake_n
+        a = C[a0, a1]
+        b0 = fake_n
+        b1 = fake_n
+        b = C[b0, b1]
+        c0 = a0 + b0
+        c1 = a1 + b1
+        c = C[c0, c1]
+        assert_equal(c, a + b)
+      end
+
+      def test_minus
+        a0 = fake_n
+        a1 = fake_n
+        a = C[a0, a1]
+        b0 = fake_n
+        b1 = fake_n
+        b = C[b0, b1]
+        c0 = a0 - b0
+        c1 = a1 - b1
+        c = C[c0, c1]
+        assert_equal(c, a - b)
+      end
+
     end
   end
 end

@@ -98,6 +98,8 @@ Example of a point implemented as a vector:
     class Point < Vector
     end
 
+Addition and subtraction:
+
 
 ### Space
 
@@ -194,3 +196,23 @@ Examples of a chess board and chess piece, implemented with vectors:
     class ChessPiece
       include Point::Vector::2D
     end
+
+
+### Array Element Math
+
+A point array has methods for `+` and `-`:
+
+    # Define a point class
+    class C < Array
+       include Point::Array
+    end
+
+    # Define some points
+    a = C[1, 1]
+    b = C[2, 2]
+
+    # Add
+    a + b #=> [3, 3]
+
+    # Subtract
+    a - b #=> [-1, -1]
