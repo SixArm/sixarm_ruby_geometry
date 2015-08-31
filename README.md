@@ -95,6 +95,7 @@ Example of a point implemented as an array:
 
 Example of a point implemented as a vector:
 
+    require 'matrix'
     class Point < Vector
     end
 
@@ -112,6 +113,7 @@ Example of a space implemented as an array:
 
 Example of a space implemented as a vector:
 
+    require 'matrix'
     class Space < Vector
     end
 
