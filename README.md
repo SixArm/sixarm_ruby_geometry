@@ -1,4 +1,4 @@
-# SixArm.com » Ruby » <br> Geometry modules
+# SixArm.com → Ruby → <br> Geometry modules
 
 <!--HEADER-OPEN-->
 
@@ -11,9 +11,7 @@
 * Doc: <http://sixarm.com/sixarm_ruby_geometry/doc>
 * Gem: <https://rubygems.org/gems/sixarm_ruby_geometry>
 * Contact: Joel Parker Henderson, <joel@sixarm.com>
-* Changes: See CHANGES.md file.
-* License: See LICENSE.md file.
-* Helping: See CONTRIBUTING.md file.
+* Project: [Changes](CHANGES.md), [License](LICENSE.md), [Contributing](CONTRIBUTING.md).
 
 <!--HEADER-SHUT-->
 
@@ -66,15 +64,19 @@ Want to help? We're happy to get pull requests.
 
 ## Install
 
-To install using a Gemfile, add this:
+### Gem
 
-    gem 'sixarm_ruby_geometry', '~> 3.0.0'
+Run this command in your shell or terminal:
 
-To install using the command line, run this:
+    gem install sixarm_ruby_geometry
 
-    gem install sixarm_ruby_geometry -v '~> 3.0.0'
+Or add this to your Gemfile:
 
-To require this gem in your code:
+    gem 'sixarm_ruby_geometry'
+
+### Require
+
+To require the gem in your code:
 
     require 'sixarm_ruby_geometry'
 

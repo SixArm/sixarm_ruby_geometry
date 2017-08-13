@@ -15,4 +15,3 @@ task :test do
   Dir.glob('./test/**/*.rb').each{|file| require file }
 end
 
-task :default => [:test]
