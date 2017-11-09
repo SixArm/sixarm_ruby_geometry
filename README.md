@@ -1,6 +1,6 @@
 # SixArm.com → Ruby → <br> Geometry modules
 
-<!--HEADER-OPEN-->
+<!--header-open-->
 
 [![Gem Version](https://badge.fury.io/rb/sixarm_ruby_geometry.svg)](http://badge.fury.io/rb/sixarm_ruby_geometry)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_geometry.png)](https://travis-ci.org/SixArm/sixarm_ruby_geometry)
@@ -13,7 +13,7 @@
 * Contact: Joel Parker Henderson, <joel@sixarm.com>
 * Project: [Changes](CHANGES.md), [License](LICENSE.md), [Contributing](CONTRIBUTING.md).
 
-<!--HEADER-SHUT-->
+<!--header-shut-->
 
 
 ## Introduction
@@ -60,7 +60,7 @@ The complete docs are at <http://sixarm.com/sixarm_ruby_geometry/doc>
 Want to help? We're happy to get pull requests.
 
 
-<!--INSTALL-OPEN-->
+<!--install-opent-->
 
 ## Install
 
@@ -80,7 +80,7 @@ To require the gem in your code:
 
     require 'sixarm_ruby_geometry'
 
-<!--INSTALL-SHUT-->
+<!--install-shut-->
 
 
 ## Usage
