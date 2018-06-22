@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-require "minitest/autorun"
-require "simplecov"
-SimpleCov.start
-
+require "sixarm_ruby_geometry_test"
 require "sixarm_ruby_geometry/space/array/d1"
 require "sixarm_ruby_geometry_test/fake"
 

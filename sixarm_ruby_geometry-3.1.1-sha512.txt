@@ -1,1 +1,0 @@
-c5d6dd8c4036333fe9d7bc62f330882a14d27fd0b0f6cafc346cd6677afb8f8b5be32f7757cb8c4945eaf0941e6ebde07da6128d204cdb1c783e96edd4d3b765  sixarm_ruby_geometry-3.1.1.gem

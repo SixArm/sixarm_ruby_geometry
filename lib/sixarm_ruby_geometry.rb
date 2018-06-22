@@ -2,7 +2,7 @@
 
 require "matrix"
 
-SOURCES = %w"5
+SOURCES = %w"
   point
   point/array
   point/array/d1

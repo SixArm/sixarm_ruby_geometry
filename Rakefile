@@ -2,16 +2,9 @@
 require "rake"
 require "rake/testtask"
 
-task :default => :test
+task :default => [:test]
 
-$:<<'lib'
-
-task :test do
-  require "simplecov"
-  SimpleCov.start do
-    add_filter "/test/"
-  end
-  $:<<'test'
-  Dir.glob('./test/**/*.rb').each{|file| require file }
+Rake::TestTask.new(:test) do |t|
+  t.libs.push("lib", "test")
+  t.pattern = "test/**/*.rb"
 end
-
