@@ -4,9 +4,9 @@
 
 [![Gem Version](https://badge.fury.io/rb/sixarm_ruby_geometry.svg)](http://badge.fury.io/rb/sixarm_ruby_geometry)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_geometry.png)](https://travis-ci.org/SixArm/sixarm_ruby_geometry)
-[![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/9ea67823a1cb274c76d5/maintainability)](https://codeclimate.com/github/SixArm/sixarm_ruby_geometry/maintainability)
+[![Code Climate](https://api.codeclimate.com/v1/badges/9ea67823a1cb274c76d5/maintainability)](https://codeclimate.com/github/SixArm/sixarm_ruby_geometry/maintainability)
 
-* Git: <https://github.com/sixarm/sixarm_ruby_geometry>
+* Git: <https://github.com/SixArm/sixarm_ruby_geometry>
 * Doc: <http://sixarm.com/sixarm_ruby_geometry/doc>
 * Gem: <https://rubygems.org/gems/sixarm_ruby_geometry>
 * Contact: Joel Parker Henderson, <joel@sixarm.com>
@@ -65,11 +65,13 @@ Want to help? We're happy to get pull requests.
 
 ### Gem
 
-Run this command in your shell or terminal:
+To install this gem in your shell or terminal:
 
     gem install sixarm_ruby_geometry
 
-Or add this to your Gemfile:
+### Gemfile
+
+To add this gem to your Gemfile:
 
     gem 'sixarm_ruby_geometry'
 
